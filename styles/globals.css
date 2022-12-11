@@ -1,21 +1,90 @@
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	padding: 0;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+@font-face {
+	font-family: "SF Pro Display";
+	src: url("../assets/fonts/SFPRODISPLAYBLACKITALIC.OTF");
+	font-weight: 900;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "SF Pro Display";
+	src: url("../assets/fonts/SFPRODISPLAYHEAVYITALIC.OTF");
+	font-weight: 800;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "SF Pro Display";
+	src: url("../assets/fonts/SFPRODISPLAYBOLD.OTF");
+	font-weight: 700;
+	font-style: bold;
+}
+
+@font-face {
+	font-family: "SF Pro Display";
+	src: url("../assets/fonts/SFPRODISPLAYSEMIBOLDITALIC.OTF");
+	font-weight: 600;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "SF Pro Display";
+	src: url("../assets/fonts/SFPRODISPLAYMEDIUM.OTF");
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "SF Pro Display";
+	src: url("../assets/fonts/SFPRODISPLAYLIGHTITALIC.OTF");
+	font-weight: 300;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "SF Pro Display";
+	src: url("../assets/fonts/SFPRODISPLAYTHINITALIC.OTF");
+	font-weight: 200;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "SF Pro Display";
+	src: url("../assets/fonts/SFPRODISPLAYULTRALIGHTITALIC.OTF");
+	font-weight: 100;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "SF Pro Display";
+	src: url("../assets/fonts/SFPRODISPLAYREGULAR.OTF");
+	font-weight: 400;
+	font-style: normal;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
+.container {
+	max-width: 375px;
+	margin: 0px auto;
+	padding: 0px 24px;
+}
+
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
@@ -23,4 +92,4 @@ a {
     color: white;
     background: black;
   }
-}
+} */
