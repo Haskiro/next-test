@@ -1,9 +1,9 @@
 import Head from "next/head";
-import Post from "../components/Post";
+import Post from "@components/Post";
 
 export default function Home() {
 	return (
-		<div className="container">
+		<>
 			<Head>
 				<title>Social | Home</title>
 				<meta
@@ -13,11 +13,11 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<main>
+			<main className="container">
 				<Post />
 			</main>
 
 			<footer></footer>
-		</div>
+		</>
 	);
 }
