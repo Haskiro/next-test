@@ -56,9 +56,17 @@
 		font-size: 12px;
 		line-height: 20px;
 		color: $text-light;
-		&Likes {
+		&Liked {
 			color: $likes;
 		}
+	}
+}
+
+.icon {
+	width: 24px;
+	height: 24px;
+	&Liked {
+		fill: $likes;
 	}
 }
 

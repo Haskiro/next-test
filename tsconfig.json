@@ -19,7 +19,8 @@
 			"@components/*": ["components/*"],
 			"@assets/*": ["assets/*"],
 			"@pages/*": ["pages/*"],
-			"@styles/*": ["styles/*"]
+			"@styles/*": ["styles/*"],
+			"@store/*": ["store/*"]
 		}
 	},
 	"include": ["next-env-custom.d.ts", "images.d.ts", "**/*.ts", "**/*.tsx"],

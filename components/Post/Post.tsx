@@ -42,12 +42,12 @@ const Post: FC = () => {
 			<div className={styles.footer}>
 				<ul className={styles.list}>
 					<li className={styles.item}>
-						<Heart className={styles.icon} />
+						<Heart className={cn(styles.icon, styles.iconLiked)} />
 						<p
 							className={cn(
 								styles.text,
 								styles.textFooter,
-								styles.textFooterLikes
+								styles.textFooterLiked
 							)}
 						>
 							25
