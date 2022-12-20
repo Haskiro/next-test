@@ -50,9 +50,7 @@ export const getItemList = async (table: string) => {
 		if (!snapshot.exists()) {
 			console.log(`No such ${table} exists`);
 		} else {
-			console.log(Object.values(snapshot.val()));
 			res = Object.values(snapshot.val());
-			return res;
 		}
 	} catch (err) {
 		console.error(err);

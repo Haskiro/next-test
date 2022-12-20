@@ -3,6 +3,8 @@ import PostList from "@components/PostList";
 import { GetStaticProps } from "next";
 import { getItemList } from "./api/api";
 import { IPost } from "@interfaces/post.interface";
+import { storage } from "../firebase";
+import { getDownloadURL, ref } from "firebase/storage";
 
 export default function Home({ posts }: { posts: IPost[] }) {
 	return (
@@ -27,6 +29,5 @@ export default function Home({ posts }: { posts: IPost[] }) {
 
 export const getStaticProps: GetStaticProps = async () => {
 	const posts = await getItemList("posts");
-	console.log(posts);
 	return { props: { posts } };
 };

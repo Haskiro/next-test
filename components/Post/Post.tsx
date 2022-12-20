@@ -22,7 +22,7 @@ const Post: FC<IPost> = ({
 		<div className={styles.block}>
 			<div className={styles.heading}>
 				<Image
-					src={imageUrl || UserPhoto}
+					src={author.imageUrl || UserPhoto}
 					alt="user-photo"
 					width={40}
 					height={40}
@@ -40,7 +40,7 @@ const Post: FC<IPost> = ({
 			<div className={styles.content}>
 				<p className={styles.text}>{text}</p>
 				<Image
-					src={PostImage}
+					src={imageUrl}
 					alt="post image"
 					width={327}
 					height={204}
