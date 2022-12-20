@@ -1,32 +1,10 @@
 import Head from "next/head";
 import PostList from "@components/PostList";
-import { set, ref, child, get } from "firebase/database";
-import { db } from "../firebase";
+import { GetStaticProps } from "next";
+import { getItemList } from "./api/api";
+import { IPost } from "@interfaces/post.interface";
 
-function writeUserData(userId: string, name: string, email: string) {
-	set(ref(db, "users/" + userId), {
-		username: name,
-		email: email,
-	});
-}
-
-function getUserById(userId: string) {
-	const dbRef = ref(db);
-	get(child(dbRef, `users/${userId}`))
-		.then((snapshot) => {
-			if (snapshot.exists()) {
-				console.log(snapshot.val());
-			} else {
-				console.log("No data available");
-			}
-		})
-		.catch((error) => {
-			console.error(error);
-		});
-}
-
-export default function Home() {
-	console.log(getUserById("1"));
+export default function Home({ posts }: { posts: IPost[] }) {
 	return (
 		<>
 			<Head>
@@ -39,10 +17,16 @@ export default function Home() {
 			</Head>
 
 			<main className="container">
-				<PostList />
+				<PostList posts={posts} />
 			</main>
 
 			<footer></footer>
 		</>
 	);
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+	const posts = await getItemList("posts");
+	console.log(posts);
+	return { props: { posts } };
+};

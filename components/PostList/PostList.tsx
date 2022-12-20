@@ -1,17 +1,18 @@
 import Post from "@components/Post";
+import { IPost } from "@interfaces/post.interface";
 import { FC } from "react";
 import styles from "./PostList.module.scss";
-import { PostListProps } from "./PostList.props";
 
-const PostList: FC = () => {
+const PostList: FC<{ posts: IPost[] }> = ({ posts }) => {
 	return (
 		<ul className={styles.list}>
-			<li className={styles.item}>
-				<Post />
-			</li>
-			<li className={styles.item}>
-				<Post />
-			</li>
+			{posts
+				? posts.map((post) => (
+						<li key={post.postId} className={styles.item}>
+							<Post {...post} />
+						</li>
+				  ))
+				: null}
 		</ul>
 	);
 };
